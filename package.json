@@ -1,0 +1,11 @@
+{
+  "name": "williamless",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-python-requirements": "4.2.4"
+  },
+  "author": "William Molina",
+  "license": "ISC"
+}
