@@ -1,0 +1,1496 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/root.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "required": [
+      "Valorable"
+    ],
+    "properties": {
+      "Valorable": {
+        "$id": "#/properties/Valorable",
+        "type": "object",
+        "title": "The Valorable Schema",
+        "required": [
+          "Invoice"
+        ],
+        "properties": {
+          "Invoice": {
+            "$id": "#/properties/Valorable/properties/Invoice",
+            "type": "array",
+            "title": "The Invoice Schema",
+            "items": {
+              "$id": "#/properties/Valorable/properties/Invoice/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "TipoDocumento",
+                "numero_documento",
+                "fecha_documento",
+                "Hora_documento",
+                "TipoMoneda",
+                "SubtotalFactura",
+                "TotalFactura",
+                "TotalAPagar",
+                "facturasVencidas",
+                "Nota1",
+                "Nota2",
+                "NaturalezaEmisor",
+                "TipoIdentificacionEmisor",
+                "IdentificacionEmisor",
+                "NombreEmisor",
+                "NombreAbreviado",
+                "CodigoPaisEmisor",
+                "TipoRegimenEmisor",
+                "NaturalezaReceptor",
+                "TipoIdentificacionReceptor",
+                "IdentificacionReceptor",
+                "CodigoPaisReceptor",
+                "TipoRegimenReceptor",
+                "FirstName",
+                "ImpuestosTotales",
+                "InformacionDetalles"
+              ],
+              "properties": {
+                "TipoDocumento": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TipoDocumento",
+                  "type": "number",
+                  "title": "The Tipodocumento Schema",
+                  "default": "",
+                  "examples": [
+                    "1"
+                  ]
+                },
+                "numero_documento": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/numero_documento",
+                  "type": "string",
+                  "title": "The Numero_documento Schema",
+                  "default": "",
+                  "examples": [
+                    "9058"
+                  ],
+                  "minLength": 1,
+                  "pattern": "^(.*)$"
+                },
+                "prefijo": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/prefijo",
+                  "type": "string",
+                  "title": "The Prefijo Schema",
+                  "default": "",
+                  "examples": [
+                    "S"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "factura_asociada": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/factura_asociada",
+                  "type": "string",
+                  "title": "The Factura_asociada Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "CodigoConceptoNota": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/CodigoConceptoNota",
+                  "type": "string",
+                  "title": "The Codigoconceptonota Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "ConceptoNota": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/ConceptoNota",
+                  "type": "string",
+                  "title": "The Conceptonota Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "fecha_documento": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/fecha_documento",
+                  "type": "string",
+                  "title": "The Fecha_documento Schema",
+                  "default": "",
+                  "examples": [
+                    "2018-11-20"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Hora_documento": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Hora_documento",
+                  "type": "string",
+                  "title": "The Hora_documento Schema",
+                  "default": "",
+                  "examples": [
+                    "12:11:25"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "fecha_vencimiento": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/fecha_vencimiento",
+                  "type": "string",
+                  "title": "The Fecha_vencimiento Schema",
+                  "default": "",
+                  "examples": [
+                    "2018-12-20"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Periodo_Facturacion": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Periodo_Facturacion",
+                  "type": "string",
+                  "title": "The Periodo_facturacion Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TipoMoneda": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TipoMoneda",
+                  "type": "string",
+                  "title": "The Tipomoneda Schema",
+                  "default": "",
+                  "examples": [
+                    "COP"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "SubtotalFactura": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/SubtotalFactura",
+                  "type": "string",
+                  "title": "The Subtotalfactura Schema",
+                  "default": "",
+                  "examples": [
+                    "13800000.00"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Descuentos": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Descuentos",
+                  "type": "string",
+                  "title": "The Descuentos Schema",
+                  "default": "",
+                  "examples": [
+                    "0.00"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TotalFactura": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TotalFactura",
+                  "type": "string",
+                  "title": "The Totalfactura Schema",
+                  "default": "",
+                  "examples": [
+                    "13800000.00"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "ValorLetras": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/ValorLetras",
+                  "type": "string",
+                  "title": "The Valorletras Schema",
+                  "default": "",
+                  "examples": [
+                    "QUINCE MILLONES CUATROCIENTOS CINCUENTA  MIL CUATROCIENTOS OCHENTA PESOS"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "ReferenciaPago": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/ReferenciaPago",
+                  "type": "string",
+                  "title": "The Referenciapago Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "NumeroContrato": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/NumeroContrato",
+                  "type": "string",
+                  "title": "The Numerocontrato Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "OrdenCompraFactura": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/OrdenCompraFactura",
+                  "type": "string",
+                  "title": "The Ordencomprafactura Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Observaciones": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Observaciones",
+                  "type": "string",
+                  "title": "The Observaciones Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "NombreCentroCostos": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/NombreCentroCostos",
+                  "type": "string",
+                  "title": "The Nombrecentrocostos Schema",
+                  "default": "",
+                  "examples": [
+                    "OFICINA PRINCIPAL - MEDELLIN"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Codigo_CECO": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Codigo_CECO",
+                  "type": "string",
+                  "title": "The Codigo_ceco Schema",
+                  "default": "",
+                  "examples": [
+                    "001"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TotalAPagar": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TotalAPagar",
+                  "type": "string",
+                  "title": "The Totalapagar Schema",
+                  "default": "",
+                  "examples": [
+                    "16422000.00"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "SaldoFavor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/SaldoFavor",
+                  "type": "string",
+                  "title": "The Saldofavor Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "CantidadfacturasVencidas": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/CantidadfacturasVencidas",
+                  "type": "string",
+                  "title": "The Cantidadfacturasvencidas Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "facturasVencidas": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/facturasVencidas",
+                  "type": "string",
+                  "title": "The Facturasvencidas Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Marca": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Marca",
+                  "type": "string",
+                  "title": "The Marca Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional1": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional1",
+                  "type": "string",
+                  "title": "The Opcional1 Schema",
+                  "default": "",
+                  "examples": [
+                    "15450480.00"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional2": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional2",
+                  "type": "string",
+                  "title": "The Opcional2 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional3": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional3",
+                  "type": "string",
+                  "title": "The Opcional3 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional4": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional4",
+                  "type": "string",
+                  "title": "The Opcional4 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional5": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional5",
+                  "type": "string",
+                  "title": "The Opcional5 Schema",
+                  "default": "",
+                  "examples": [
+                    "971520.00"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "emailCliente": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/emailCliente",
+                  "type": "string",
+                  "title": "The Emailcliente Schema",
+                  "default": "",
+                  "examples": [
+                    "apgarzon@ath.com.co"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "emailfacturador": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/emailfacturador",
+                  "type": "string",
+                  "title": "The Emailfacturador Schema",
+                  "default": "",
+                  "examples": [
+                    "facturacion@seti.com.co"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "emailControler": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/emailControler",
+                  "type": "string",
+                  "title": "The Emailcontroler Schema",
+                  "default": "",
+                  "examples": [
+                    "compras@seti.com.co"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Nota1": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Nota1",
+                  "type": "string",
+                  "title": "The Nota1 Schema",
+                  "default": "",
+                  "examples": [
+                    "Esta Factura de venta se asimila para todos sus efectos legales a un titulo valor de acuerdo a Ley 1231 del 17 de Julio 2008"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Nota2": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Nota2",
+                  "type": "string",
+                  "title": "The Nota2 Schema",
+                  "default": "",
+                  "examples": [
+                    "No somos Autorretenedores# No somos grandes contribuyentes# Iva regimén común# Codigo de Actividad ICA 6202"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Nota3": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Nota3",
+                  "type": "string",
+                  "title": "The Nota3 Schema",
+                  "default": "",
+                  "examples": [
+                    "Resolución factura por computador Nº 18762006005220#Fecha 06-12-2017#Del: 00007001 al 00013000"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional6": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional6",
+                  "type": "string",
+                  "title": "The Opcional6 Schema",
+                  "default": "",
+                  "examples": [
+                    "Contacto ATH: Sandra Cardenas, Subdirectora Centro de Operaciones de Seguridad, Gerencia de Ciberseguridad y Riesgos. Tel¿¿fono: 6422000 extensi¿¿n 2411. Orden de compra 4210000393 - Factura 5 de 6."
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional7": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional7",
+                  "type": "string",
+                  "title": "The Opcional7 Schema",
+                  "default": "",
+                  "examples": [
+                    "SERVICIOS ESPECIALIZADOS DE TECNOLOGIA E INFORMATICA SETI S.A.S BANCOLOMBIA CTE 61003099895"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional8": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional8",
+                  "type": "string",
+                  "title": "The Opcional8 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional9": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional9",
+                  "type": "string",
+                  "title": "The Opcional9 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional10": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional10",
+                  "type": "string",
+                  "title": "The Opcional10 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "NaturalezaEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/NaturalezaEmisor",
+                  "type": "string",
+                  "title": "The Naturalezaemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TipoIdentificacionEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TipoIdentificacionEmisor",
+                  "type": "string",
+                  "title": "The Tipoidentificacionemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "31"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "IdentificacionEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/IdentificacionEmisor",
+                  "type": "string",
+                  "title": "The Identificacionemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "830047444"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "NombreEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/NombreEmisor",
+                  "type": "string",
+                  "title": "The Nombreemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "SERVICIOS ESPECIALIZADOS DE TECNOLOGIA E INFORMATICA SETI S.A.S"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "NombreAbreviado": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/NombreAbreviado",
+                  "type": "string",
+                  "title": "The Nombreabreviado Schema",
+                  "default": "",
+                  "examples": [
+                    "SETI_PRUEBAS"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "CodigoDepartamentoEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/CodigoDepartamentoEmisor",
+                  "type": "string",
+                  "title": "The Codigodepartamentoemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "05"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "DepartamentoEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/DepartamentoEmisor",
+                  "type": "string",
+                  "title": "The Departamentoemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "ANTIOQUIA"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "BarrioCiudadEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/BarrioCiudadEmisor",
+                  "type": "string",
+                  "title": "The Barriociudademisor Schema",
+                  "default": "",
+                  "examples": [
+                    "MEDELLIN"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "CodigoCiudadEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/CodigoCiudadEmisor",
+                  "type": "string",
+                  "title": "The Codigociudademisor Schema",
+                  "default": "",
+                  "examples": [
+                    "05001"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "NombreCiudadEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/NombreCiudadEmisor",
+                  "type": "string",
+                  "title": "The Nombreciudademisor Schema",
+                  "default": "",
+                  "examples": [
+                    "MEDELLIN"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "DireccionEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/DireccionEmisor",
+                  "type": "string",
+                  "title": "The Direccionemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "CL 3 SUR 41 65 P 6"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "DireccionPostalEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/DireccionPostalEmisor",
+                  "type": "string",
+                  "title": "The Direccionpostalemisor Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "CodigoPaisEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/CodigoPaisEmisor",
+                  "type": "string",
+                  "title": "The Codigopaisemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "CO"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "PaisEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/PaisEmisor",
+                  "type": "string",
+                  "title": "The Paisemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "COLOMBIA"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TipoRegimenEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TipoRegimenEmisor",
+                  "type": "string",
+                  "title": "The Tiporegimenemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "2"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TelefonoEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TelefonoEmisor",
+                  "type": "string",
+                  "title": "The Telefonoemisor Schema",
+                  "default": "",
+                  "examples": [
+                    "(4) 320 20 20"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "FaxEmisor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/FaxEmisor",
+                  "type": "string",
+                  "title": "The Faxemisor Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional11": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional11",
+                  "type": "string",
+                  "title": "The Opcional11 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional12": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional12",
+                  "type": "string",
+                  "title": "The Opcional12 Schema",
+                  "default": "",
+                  "examples": [
+                    "0"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional13": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional13",
+                  "type": "string",
+                  "title": "The Opcional13 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional14": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional14",
+                  "type": "string",
+                  "title": "The Opcional14 Schema",
+                  "default": "",
+                  "examples": [
+                    "NIT"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional15": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional15",
+                  "type": "string",
+                  "title": "The Opcional15 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "NaturalezaReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/NaturalezaReceptor",
+                  "type": "string",
+                  "title": "The Naturalezareceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TipoIdentificacionReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TipoIdentificacionReceptor",
+                  "type": "string",
+                  "title": "The Tipoidentificacionreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "31"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "IdentificacionReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/IdentificacionReceptor",
+                  "type": "string",
+                  "title": "The Identificacionreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "800143407"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "CodigoDepartamentoReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/CodigoDepartamentoReceptor",
+                  "type": "string",
+                  "title": "The Codigodepartamentoreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "05"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "DepartamentoReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/DepartamentoReceptor",
+                  "type": "string",
+                  "title": "The Departamentoreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "BOGOTA"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "BarrioCiudadReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/BarrioCiudadReceptor",
+                  "type": "string",
+                  "title": "The Barriociudadreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "SANTAFE DE BOGOTA D.C."
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "CodigoCiudadReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/CodigoCiudadReceptor",
+                  "type": "string",
+                  "title": "The Codigociudadreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "11001"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "NombreCiudadReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/NombreCiudadReceptor",
+                  "type": "string",
+                  "title": "The Nombreciudadreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "SANTAFE DE BOGOTA D.C."
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "DireccionReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/DireccionReceptor",
+                  "type": "string",
+                  "title": "The Direccionreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "CRA 11 87 51"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "DireccionPostalReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/DireccionPostalReceptor",
+                  "type": "string",
+                  "title": "The Direccionpostalreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "CodigoPaisReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/CodigoPaisReceptor",
+                  "type": "string",
+                  "title": "The Codigopaisreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "CO"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "PaisReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/PaisReceptor",
+                  "type": "string",
+                  "title": "The Paisreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "COLOMBIA"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TipoRegimenReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TipoRegimenReceptor",
+                  "type": "string",
+                  "title": "The Tiporegimenreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "2"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "FirstName": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/FirstName",
+                  "type": "string",
+                  "title": "The Firstname Schema",
+                  "default": "",
+                  "examples": [
+                    "A TODA HORA S A"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "FamilyName": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/FamilyName",
+                  "type": "string",
+                  "title": "The Familyname Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "MiddleName": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/MiddleName",
+                  "type": "string",
+                  "title": "The Middlename Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TelefonoReceptor": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/TelefonoReceptor",
+                  "type": "string",
+                  "title": "The Telefonoreceptor Schema",
+                  "default": "",
+                  "examples": [
+                    "6422000"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional16": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional16",
+                  "type": "string",
+                  "title": "The Opcional16 Schema",
+                  "default": "",
+                  "examples": [
+                    "1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional17": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional17",
+                  "type": "string",
+                  "title": "The Opcional17 Schema",
+                  "default": "",
+                  "examples": [
+                    "NIT"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional18": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional18",
+                  "type": "string",
+                  "title": "The Opcional18 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional19": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional19",
+                  "type": "string",
+                  "title": "The Opcional19 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Opcional20": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/Opcional20",
+                  "type": "string",
+                  "title": "The Opcional20 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "ImpuestosTotales": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales",
+                  "type": "array",
+                  "title": "The Impuestostotales Schema",
+                  "items": {
+                    "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "properties": {
+                      "NombreImpuesto": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/NombreImpuesto",
+                        "type": "string",
+                        "title": "The Nombreimpuesto Schema",
+                        "default": "",
+                        "examples": [
+                          "IVA"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "ValorTotalImpuesto": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/ValorTotalImpuesto",
+                        "type": "string",
+                        "title": "The Valortotalimpuesto Schema",
+                        "default": "",
+                        "examples": [
+                          "2622000.00"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "TipoImpuesto": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/TipoImpuesto",
+                        "type": "string",
+                        "title": "The Tipoimpuesto Schema",
+                        "default": "",
+                        "examples": [
+                          "false"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional21": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Opcional21",
+                        "type": "string",
+                        "title": "The Opcional21 Schema",
+                        "default": "",
+                        "examples": [
+                          "01"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Subtotales": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales",
+                        "type": "array",
+                        "title": "The Subtotales Schema",
+                        "default": null,
+                        "items": {
+                          "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "SubtotalImpuesto",
+                            "ValorImpuesto",
+                            "Porcentaje",
+                            "CodigoImpuesto"
+                          ],
+                          "properties": {
+                            "SubtotalImpuesto": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items/properties/SubtotalImpuesto",
+                              "type": "string",
+                              "title": "The Subtotalimpuesto Schema",
+                              "default": "",
+                              "examples": [
+                                "13800000.00"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "ValorImpuesto": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items/properties/ValorImpuesto",
+                              "type": "string",
+                              "title": "The Valorimpuesto Schema",
+                              "default": "",
+                              "examples": [
+                                "2622000.00"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Porcentaje": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items/properties/Porcentaje",
+                              "type": "string",
+                              "title": "The Porcentaje Schema",
+                              "default": "",
+                              "examples": [
+                                "19.00"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "CodigoImpuesto": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items/properties/CodigoImpuesto",
+                              "type": "string",
+                              "title": "The Codigoimpuesto Schema",
+                              "default": "",
+                              "examples": [
+                                "01"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional22": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items/properties/Opcional22",
+                              "type": "string",
+                              "title": "The Opcional22 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional23": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items/properties/Opcional23",
+                              "type": "string",
+                              "title": "The Opcional23 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional24": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items/properties/Opcional24",
+                              "type": "string",
+                              "title": "The Opcional24 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional25": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/ImpuestosTotales/items/properties/Subtotales/items/properties/Opcional25",
+                              "type": "string",
+                              "title": "The Opcional25 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "ValorTotalImpuesto",
+                      "TipoImpuesto"
+                    ]
+                  }
+                },
+                "InformacionDetalles": {
+                  "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles",
+                  "type": "array",
+                  "title": "The Informaciondetalles Schema",
+                  "items": {
+                    "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "properties": {
+                      "IDOrdenamiento": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/IDOrdenamiento",
+                        "type": "string",
+                        "title": "The Idordenamiento Schema",
+                        "default": "",
+                        "examples": [
+                          "1"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "CantidadDetalle": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/CantidadDetalle",
+                        "type": "string",
+                        "title": "The Cantidaddetalle Schema",
+                        "default": "",
+                        "examples": [
+                          "1.00"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "ValorUnitarioDetalle": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ValorUnitarioDetalle",
+                        "type": "string",
+                        "title": "The Valorunitariodetalle Schema",
+                        "default": "",
+                        "examples": [
+                          "13800000.00"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "ValorTotalDetalle": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ValorTotalDetalle",
+                        "type": "string",
+                        "title": "The Valortotaldetalle Schema",
+                        "default": "",
+                        "examples": [
+                          "13800000.00"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "ImpuestoDetalle": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle",
+                        "type": "array",
+                        "title": "The Impuestodetalle Schema",
+                        "default": null,
+                        "items": {
+                          "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "properties": {
+                            "CodigoImpuesto": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/CodigoImpuesto",
+                              "type": "string",
+                              "title": "The Codigoimpuesto Schema",
+                              "default": "",
+                              "examples": [
+                                "01"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "NombreImpuestoDetalle": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/NombreImpuestoDetalle",
+                              "type": "string",
+                              "title": "The Nombreimpuestodetalle Schema",
+                              "default": "",
+                              "examples": [
+                                "IVA"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "ValorTotalImpuestoDetalle": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/ValorTotalImpuestoDetalle",
+                              "type": "string",
+                              "title": "The Valortotalimpuestodetalle Schema",
+                              "default": "",
+                              "examples": [
+                                "2622000.00"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "PorcentajeImpuestoDetalle": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/PorcentajeImpuestoDetalle",
+                              "type": "string",
+                              "title": "The Porcentajeimpuestodetalle Schema",
+                              "default": "",
+                              "examples": [
+                                "19.00"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "TipoImpuesto": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/TipoImpuesto",
+                              "type": "string",
+                              "title": "The Tipoimpuesto Schema",
+                              "default": "",
+                              "examples": [
+                                "false"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional26": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/Opcional26",
+                              "type": "string",
+                              "title": "The Opcional26 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional27": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/Opcional27",
+                              "type": "string",
+                              "title": "The Opcional27 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional28": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/Opcional28",
+                              "type": "string",
+                              "title": "The Opcional28 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional29": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/Opcional29",
+                              "type": "string",
+                              "title": "The Opcional29 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "Opcional30": {
+                              "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/ImpuestoDetalle/items/properties/Opcional30",
+                              "type": "string",
+                              "title": "The Opcional30 Schema",
+                              "default": "",
+                              "examples": [
+                                ""
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      },
+                      "CodigoArticulo": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/CodigoArticulo",
+                        "type": "string",
+                        "title": "The Codigoarticulo Schema",
+                        "default": "",
+                        "examples": [
+                          "VN-0001"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "descripcion": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/descripcion",
+                        "type": "string",
+                        "title": "The Descripcion Schema",
+                        "default": "",
+                        "examples": [
+                          "ADMINISTRACION VTAS NACIONALES#GESTOR DE PROYECTOS SEGURIDAD 6 MESES"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "observaciones": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/observaciones",
+                        "type": "string",
+                        "title": "The Observaciones Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "NombreCentroCostos": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/NombreCentroCostos",
+                        "type": "string",
+                        "title": "The Nombrecentrocostos Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Codigo_CECO": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Codigo_CECO",
+                        "type": "string",
+                        "title": "The Codigo_ceco Schema",
+                        "default": "",
+                        "examples": [
+                          "1609"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional31": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional31",
+                        "type": "string",
+                        "title": "The Opcional31 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional32": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional32",
+                        "type": "string",
+                        "title": "The Opcional32 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional33": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional33",
+                        "type": "string",
+                        "title": "The Opcional33 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional34": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional34",
+                        "type": "string",
+                        "title": "The Opcional34 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional35": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional35",
+                        "type": "string",
+                        "title": "The Opcional35 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional36": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional36",
+                        "type": "string",
+                        "title": "The Opcional36 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional37": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional37",
+                        "type": "string",
+                        "title": "The Opcional37 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional38": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional38",
+                        "type": "string",
+                        "title": "The Opcional38 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional39": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional39",
+                        "type": "string",
+                        "title": "The Opcional39 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional40": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional40",
+                        "type": "string",
+                        "title": "The Opcional40 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional41": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional41",
+                        "type": "string",
+                        "title": "The Opcional41 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional42": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional42",
+                        "type": "string",
+                        "title": "The Opcional42 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional43": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional43",
+                        "type": "string",
+                        "title": "The Opcional43 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional44": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional44",
+                        "type": "string",
+                        "title": "The Opcional44 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional45": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional45",
+                        "type": "string",
+                        "title": "The Opcional45 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional46": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional46",
+                        "type": "string",
+                        "title": "The Opcional46 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional47": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional47",
+                        "type": "string",
+                        "title": "The Opcional47 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional48": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional48",
+                        "type": "string",
+                        "title": "The Opcional48 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional49": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional49",
+                        "type": "string",
+                        "title": "The Opcional49 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "Opcional50": {
+                        "$id": "#/properties/Valorable/properties/Invoice/items/properties/InformacionDetalles/items/properties/Opcional50",
+                        "type": "string",
+                        "title": "The Opcional50 Schema",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    },
+                    "required": [
+                      "CantidadDetalle"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

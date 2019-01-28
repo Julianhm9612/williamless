@@ -1,5 +1,4 @@
 import json
-from schema import Schema
 from functools import wraps
 from s3_model import S3Model
 

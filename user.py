@@ -1,26 +1,20 @@
 from s3_api_raw import S3ApiRaw
 from s3_model import S3Model
-from schema import Schema, Use
+#from schema import Schema
+from jsonschema import Draft4Validator
+import json
 
 #We define the model
 class User(S3Model):
-    """
-        User:
-        - name: "user"
-        - schema: 
-           id: string
-           first_name: str,
-           last_name: str,
-           birthday: str,
-    """
+    def load_file(name):
+        with open(name) as f:
+            return json.load(f)
+
     name = 'user'
-    SCHEMA = Schema({
-        'id': str,
-        'first_name': str,
-        'last_name': str,
-        'birthday': str,
-        'age': int
-    })
+    folder = 'XMLRecibidos'
+    extension = 'json'
+    efactura = 'EFactura'
+    SCHEMA = load_file('factura.schema.json')
 
 # Next we define the resource
 class UserResource(S3ApiRaw):

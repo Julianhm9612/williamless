@@ -1,0 +1,3 @@
+import user
+
+print(User())
