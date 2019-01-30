@@ -66,11 +66,12 @@ class S3Model(object):
         if 'ubicacion' in resp[0]:
             return resp
         nit = obj["Valorable"]["Invoice"][0]["IdentificacionEmisor"]
-        fechaHora = datetime.datetime.now().strftime("%Y%m%d%H%M%S")        
+        fechaHora = datetime.datetime.now().strftime("%Y%m%d%H%M%S")      
+        factura = json.dumps(obj) if formato=='json' else dicttoxml.dicttoxml(obj, custom_root='FactElectronica')
         s3.put_object(
             Bucket=BUCKET,
             Key=f'{cls.folder}/{nit}/{nit}{cls.efactura}/{nit}_{fechaHora}_{object_id}.{formato}',
-            Body=json.dumps(obj)
+            Body=factura
         )
         return resp
 

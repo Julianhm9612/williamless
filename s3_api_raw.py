@@ -53,9 +53,10 @@ class S3ApiRaw(object):
     @handle_api_error
     def post(cls, event, context):
         formato = event['queryStringParameters']['formato']
-        obj = json.loads(event['body'])
-        if 'id' in obj:
-            raise Exception('Do not specify id in resource creation')
+        #Validar formato, por defecto es json
+        if formato not in set(['json', 'xml']):
+            formato = 'json'
+        obj = json.loads(event['body'])        
         return cls.s3_model_cls.savejson(obj, formato)
 
     @classmethod
