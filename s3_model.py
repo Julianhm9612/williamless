@@ -2,6 +2,7 @@ import json
 import boto3
 import os, datetime
 import uuid
+import dicttoxml
 from jsonschema import Draft4Validator
 #from schema import Schema
 
@@ -58,7 +59,7 @@ class S3Model(object):
             return types[name]
 
     @classmethod
-    def save(cls, obj):
+    def savejson(cls, obj, formato):
         # We affect an id if there isn't one
         object_id = obj.setdefault('id', str(uuid.uuid4()))
         resp = cls.validate(obj)
@@ -68,8 +69,24 @@ class S3Model(object):
         fechaHora = datetime.datetime.now().strftime("%Y%m%d%H%M%S")        
         s3.put_object(
             Bucket=BUCKET,
-            Key=f'{cls.folder}/{nit}/{nit}{cls.efactura}/{nit}_{fechaHora}_{object_id}.{cls.extension}',
+            Key=f'{cls.folder}/{nit}/{nit}{cls.efactura}/{nit}_{fechaHora}_{object_id}.{formato}',
             Body=json.dumps(obj)
+        )
+        return resp
+
+    @classmethod
+    def savexml(cls, obj):
+        # We affect an id if there isn't one
+        object_id = obj.setdefault('id', str(uuid.uuid4()))
+        resp = cls.validate(obj)
+        if 'ubicacion' in resp[0]:
+            return resp
+        nit = obj["Valorable"]["Invoice"][0]["IdentificacionEmisor"]
+        fechaHora = datetime.datetime.now().strftime("%Y%m%d%H%M%S")        
+        s3.put_object(
+            Bucket=BUCKET,
+            Key=f'{cls.folder}/{nit}/{nit}{cls.efactura}/{nit}_{fechaHora}_{object_id}.xml',
+            Body=dicttoxml.dicttoxml(obj, custom_root='FactElectronica')
         )
         return resp
 

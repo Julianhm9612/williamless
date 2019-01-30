@@ -9,7 +9,6 @@ class User(S3Model):
     def load_file(name):
         with open(name) as f:
             return json.load(f)
-
     name = 'user'
     folder = 'XMLRecibidos'
     extension = 'json'
