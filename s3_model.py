@@ -4,10 +4,22 @@ import os, datetime
 import uuid
 import dicttoxml
 from jsonschema import Draft4Validator
+import requests
+from requests_aws4auth import AWS4Auth
 #from schema import Schema
 
 # We use boto3 to interact with AWS services 
 s3 = boto3.client('s3')
+region = 'us-east-2' # e.g. us-west-1
+service = 'es'
+credentials = boto3.Session().get_credentials()
+awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
+host = 'https://search-socrates-ujpub44eroxxkktpak4n6yvoo4.us-east-2.es.amazonaws.com' # the Amazon ES domain, including https://
+index = 'factelectronica'
+tipo = 'request'
+url = host + '/' + index + '/' + tipo
+
+headers = { "Content-Type": "application/json" }
 
 # This is the environment variable defined in the serverless.yml
 BUCKET = os.getenv('BUCKET')
@@ -61,6 +73,8 @@ class S3Model(object):
     @classmethod
     def savejson(cls, obj, formato):
         # We affect an id if there isn't one
+        document = { "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "mensaje": obj }
+        r = requests.post(url, auth=awsauth, json=document, headers=headers)
         object_id = obj.setdefault('id', str(uuid.uuid4()))
         resp = cls.validate(obj)
         if 'ubicacion' in resp[0]:
